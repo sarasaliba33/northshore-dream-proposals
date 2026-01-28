@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NorthShore Dream Proposals | Gallery</title>
+
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico" />
+    <link rel="stylesheet" href="NDP-global.css" />
+    <link rel="stylesheet" href="Gallery-style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+  </head>
+
+  <body class="gallery-body">
+    <!-- TOP NAV -->
+    <nav class="nav">
+      <div class="brand">
+        <span class="brand-name"></span>
+      </div>
+
+      <a class="nav-center-logo" href="index.html" aria-label="Go to Home">
+        <img
+          src="Images/FloralHeart.PNG"
+          alt="NorthShore Dream Proposals Logo"
+          class="brand-logo"
+        />
+      </a>
+
+      <div class="nav-right">
+        <a
+          href="https://www.instagram.com/northshore_dream_proposals/"
+          class="instagram-link"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="sidebar"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="overlay" id="overlay" hidden></div>
+
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+      <div class="sidebar-header">
+        <span class="sidebar-title"></span>
+        <button class="sidebar-close" type="button" aria-label="Close menu">
+          &times;
+        </button>
+      </div>
+
+      <nav class="sidebar-links">
+        <a href="index.html">Home</a>
+        <a href="NDP-abtpage.html">About</a>
+        <a href="Packages-page.html">Packages</a>
+        <a href="Gallery.html" aria-current="page">Gallery</a>
+
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfcoh_LDzdU7ldQhCliCUCRGMpXS8hXRFlNs6u15eCjOO5VZg/viewform?usp=header" target="_blank" rel="noopener">
+          Book
+        </a>
+      </nav>
+    </aside>
+
+    <main class="page">
+      <section class="section">
+        <div class="container flyer">
+          <header class="flyer-title">
+            <h1 class="title-line script-title">
+              <span>Photo</span>
+              <span>Gallery</span>
+            </h1>
+          </header>
+          <div class="gallery-grid">
+            <img src="Images/Proposal.JPG" alt="Proposal setup photo 1" loading="lazy" class="gallery-img" />
+            <img src="Images/Proposal2.JPG" alt="Proposal setup photo 2" loading="lazy" class="gallery-img" />
+            <img src="Images/Proposal3.JPG" alt="Proposal setup photo 3" loading="lazy" class="gallery-img" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+      <img class="lightbox-img" id="lightbox-img" alt="Expanded gallery image"/>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <script src="Gallery-lightbox.js"></script>
+    <script src="NDP-sidebar.js"></script>
+  </body>
+</html>
