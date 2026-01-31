@@ -76,7 +76,7 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
   gap:16px;
   padding: 22px 28px;
   border: 1px solid var(--line);
-  background: rgba(0,0,0,.22);
+  background: rgba(88, 81, 81, 0.22);
   backdrop-filter: blur(10px);
   border-radius: 999px;
   position: relative;
@@ -269,7 +269,7 @@ body::before{
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.30;
+  opacity: 0.50;
 
   background-image:
     url("Images/florals/top_left_corner.png"),
