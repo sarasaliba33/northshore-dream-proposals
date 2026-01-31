@@ -272,10 +272,10 @@ body::before{
   opacity: 0.50;
 
   background-image:
-    url("Images/florals/top_left_corner.png"),
-    url("Images/florals/top_right_corner.png"),
-    url("Images/florals/bottom_left_corner.png"),
-    url("Images/florals/bottom_right_corner.png");
+    url("Images/Florals/top_left_corner.png"),
+    url("Images/Florals/top_right_corner.png"),
+    url("Images/Florals/bottom_left_corner.png"),
+    url("Images/Florals/bottom_right_corner.png");
 
   background-repeat: no-repeat;
   background-size: 320px 320px;
