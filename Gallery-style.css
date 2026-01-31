@@ -1,5 +1,5 @@
 .gallery-body{
-  background: #eca2bb;
+  background: #e8d2c5;
 }
 
 .flyer{
@@ -39,7 +39,6 @@
   background: rgba(255,255,255,0.22);
 }
 
-/* Gallery */
 .gallery-grid{
   margin-top: 22px;
   display: grid;
@@ -74,7 +73,6 @@
   .gallery-grid{ grid-template-columns: 1fr; }
 }
 
-/* Lightbox */
 .lightbox{
   position: fixed;
   inset: 0;
