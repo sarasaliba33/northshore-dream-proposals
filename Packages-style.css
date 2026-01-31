@@ -1,5 +1,5 @@
 .packages-body{
-  background: #eca2bb;
+  background: #e8d2c5;
 }
 
 .flyer{
@@ -7,7 +7,6 @@
   padding-bottom: 0;
 }
 
-/* Title styling */
 .flyer-title{
   padding: 12px 0 10px 0;
 }
@@ -20,7 +19,6 @@
   position: relative;
 }
 
-/* Script title */
 .script-title{
   font-family: "Italianno", cursive;
   font-weight: 400;
