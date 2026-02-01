@@ -267,10 +267,10 @@ body::before{
   opacity: var(--floral-opacity);
 
   background-image:
-    url("Images/florals/Top-Left-Floral-Border.PNG"),
-    url("Images/florals/Top-Right-Floral-Border.PNG"),
-    url("Images/florals/Bottom-Left-Floral-Border.PNG"),
-    url("Images/florals/Bottom-Right-Floral-Border.PNG");
+    url("Images/Florals/Top-Left-Floral-Border.PNG"),
+    url("Images/Florals/Top-Right-Floral-Border.PNG"),
+    url("Images/Florals/Bottom-Left-Floral-Border.PNG"),
+    url("Images/Florals/Bottom-Right-Floral-Border.PNG");
 
   background-repeat: no-repeat;
   background-size: var(--floral-size) var(--floral-size);
