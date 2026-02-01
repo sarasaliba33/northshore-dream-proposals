@@ -24,15 +24,6 @@
   font-weight: 400;
   font-size: clamp(3.2rem, 7vw, 5rem);
   color: rgba(53,51,51,0.92);
-  letter-spacing: 0.5px;
-}
-
-.script-title span{
-  display: inline-block;
-}
-
-.script-title span:first-child{
-  margin-right: 14px;
 }
 
 .title-line::after{
@@ -42,8 +33,10 @@
   right: 0;
   bottom: -10px;
   height: 1px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.35);
 }
+
+/* ---------------- Packages ---------------- */
 
 .pkg-row{
   display: grid;
@@ -65,27 +58,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-}
-
-.pkg-content{
-  padding-right: 8px;
 }
 
 .pkg-name{
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  font-size: 2rem;
   color: rgba(53,51,51,0.92);
 }
 
 .pkg-list{
-  margin: 0;
   padding-left: 20px;
+  font-size: 1.15rem;
   color: rgba(53,51,51,0.92);
-  line-height: 1.55;
-  font-size: 1.20rem;
 }
 
 .pkg-list li{
@@ -93,115 +78,103 @@
 }
 
 .pkg-price{
-  margin: 12px 0;
+  margin-top: 12px;
   font-weight: 800;
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   color: rgba(53,51,51,0.92);
 }
 
 .divider{
   height: 1px;
-  background: rgba(255,255,255,0.22);
-  margin: 10px 0;
+  background: rgba(255,255,255,0.35);
+  margin: 14px 0;
 }
 
 .flyer-notes{
-  margin-top: 12px;
-  padding: 16px 18px;
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 20px;
   background: rgba(255,255,255,0.55);
-  border-radius: 26px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 .notes-title{
-  margin: 0 0 12px 0;
+  margin-bottom: 14px;
   font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   color: rgba(53,51,51,0.92);
 }
 
 .notes-grid{
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .note-item{
-  padding: 12px 14px;
+  padding: 16px;
   border-radius: 16px;
-  background: rgba(0,0,0,0.10);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.06);
 }
 
 .note-item strong{
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
   color: rgba(53,51,51,0.92);
-  font-size: 1.10rem;
 }
 
 .note-text{
-  margin: 0;
-  font-size: 1.20rem;
-  line-height: 1.55;
+  font-size: 1.15rem;
   color: rgba(53,51,51,0.92);
 }
 
-.addons-bar{
-  margin-top: 22px;
-  padding: 22px;
-  border-radius: 26px;
-  background: rgba(255,255,255,0.55);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* ---------------- Add-Ons ---------------- */
 
-.addons-box{
-  width: 100%;
-  max-width: 980px;
-  padding: 18px 22px;
+.addons-section{
+  margin-top: 20px;
+  padding: 18px;
   border-radius: 20px;
-  background: rgba(0,0,0,0.10);
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.22);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
-.addons-label{
-  font-weight: 800;
-  letter-spacing: 0.3px;
+.addons-title{
+  margin: 0 0 14px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
   color: rgba(53,51,51,0.92);
 }
 
-.addons-item{
-  color: rgba(53,51,51,0.92);
+.addons-inner{
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.06);
 }
 
-.dot{
-  color: rgba(53,51,51,0.92);
-  opacity: 0.9;
+.addons-list{
+  margin: 0;
+  padding-left: 22px;
+  list-style: disc;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px 24px;
 }
+
+.addons-list li{
+  font-size: 1.1rem;
+  color: rgba(53,51,51,0.92);
+  line-height: 1.45;
+}
+
+/* ---------------- For Mobile Devices ---------------- */
 
 @media (max-width: 900px){
   .pkg-row{
     grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 16px 0;
+    gap: 16px;
   }
 
-  .pkg-media{
-    border-radius: 22px;
-  }
-
-  .addons-bar{
-    padding: 16px;
-  }
-
-  .addons-box{
-    padding: 16px;
-    gap: 8px;
+  .addons-list{
+    grid-template-columns: 1fr;
   }
 }
