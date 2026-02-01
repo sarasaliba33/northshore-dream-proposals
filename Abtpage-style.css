@@ -23,7 +23,7 @@
 }
 
 .about-text{
-  text-align: left;
+  text-align: center;
 }
 
 .flyer-h1{
@@ -34,7 +34,7 @@
   font-style: normal;
   color: rgba(53,51,51,0.92);
   position: relative;
-  text-align: left;
+  text-align: center;
 }
 
 .flyer-h1::after{
