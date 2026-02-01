@@ -301,8 +301,8 @@ body::before{
 /* ---------------- For Mobile Devices ---------------- */
 @media (max-width: 768px){
   :root{
-    --floral-size: 240px;
-    --floral-safe: 230px;
+    --floral-size: 220px;
+    --floral-safe: 140px;
   }
 
   .nav{
@@ -319,6 +319,6 @@ body::before{
   }
 
   .page{
-    padding-bottom: calc(var(--floral-safe) + 40px + env(safe-area-inset-bottom));
+    padding-bottom: calc(var(--floral-safe) + 16px + env(safe-area-inset-bottom));
   }
 }
