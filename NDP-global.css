@@ -12,7 +12,9 @@
   --floral-size: 320px;
   --floral-offset: -30px;
   --floral-opacity: 0.50;
-  --floral-safe: 200px;
+  --floral-safe: 200px; 
+
+  --page-top-offset: 135px; /* ----- NEW CHANGE ----- */
 }
 
 *{ box-sizing:border-box; }
@@ -267,10 +269,10 @@ body::before{
   opacity: var(--floral-opacity);
 
   background-image:
-    url("Images/Florals/Top-Left-Floral-Border.PNG"),
-    url("Images/Florals/Top-Right-Floral-Border.PNG"),
-    url("Images/Florals/Bottom-Left-Floral-Border.PNG"),
-    url("Images/Florals/Bottom-Right-Floral-Border.PNG");
+    url("Images/Florals/top_left_corner.png"),
+    url("Images/Florals/top_right_corner.png"),
+    url("Images/Florals/bottom_left_corner.png"),
+    url("Images/Florals/bottom_right_corner.png");
 
   background-repeat: no-repeat;
   background-size: var(--floral-size) var(--floral-size);
@@ -293,6 +295,10 @@ body::before{
 .page{
   padding-bottom: calc(var(--floral-safe) + env(safe-area-inset-bottom));
 }
+
+.page > :first-child{
+  margin-top: var(--page-top-offset);
+} /* ----- NEW CHANGE ----- */
 
 .page > :last-child{
   margin-bottom: calc(var(--floral-safe) * 0.35);
