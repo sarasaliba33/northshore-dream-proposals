@@ -1,5 +1,5 @@
 .packages-body{
-  background: #f7e6ea;
+  background: white;
 }
 
 .flyer{
@@ -52,12 +52,44 @@
   background: rgba(0,0,0,0.12);
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
   aspect-ratio: 16 / 9;
+  position: relative;
 }
 
-.pkg-media img{
+.pkg-media-btn{
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  outline: none;
+}
+
+.pkg-media-btn:focus-visible{
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.7);
+}
+
+.pkg-media img,
+.pkg-img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.pkg-media-btn:hover .pkg-img{
+  transform: scale(1.03);
+  filter: brightness(1.06);
+}
+
+.pkg-img--platinum{
+  object-position: center 35%;
 }
 
 .pkg-name{
@@ -94,7 +126,7 @@
   margin-top: 16px;
   padding: 18px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.55);
+  background: rgb(240, 225, 225);
   border: 1px solid rgba(0,0,0,0.08);
 }
 
@@ -113,7 +145,7 @@
 .note-item{
   padding: 16px;
   border-radius: 16px;
-  background: rgba(0,0,0,0.06);
+  background: rgba(253, 252, 252, 0.551);
 }
 
 .note-item strong{
@@ -134,7 +166,7 @@
   margin-top: 20px;
   padding: 18px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.55);
+  background: rgb(240, 225, 225);
   border: 1px solid rgba(0,0,0,0.08);
 }
 
@@ -148,7 +180,7 @@
 .addons-inner{
   padding: 16px;
   border-radius: 16px;
-  background: rgba(0,0,0,0.06);
+  background: rgba(253, 252, 252, 0.551);
 }
 
 .addons-list{
@@ -164,6 +196,39 @@
   font-size: 1.1rem;
   color: rgba(53,51,51,0.92);
   line-height: 1.45;
+}
+
+/* ---------------- LIGHTBOX ---------------- */
+
+.pkg-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.pkg-lightbox-img{
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.pkg-lightbox-close{
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 42px;
+  color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  font-weight: 300;
+  background: transparent;
+  border: none;
 }
 
 /* ---------------- For Mobile Devices ---------------- */
