@@ -88,11 +88,24 @@
             </h1>
           </header>
 
-          <!-- GOLD PACKAGE-->
+          <!-- GOLD PACKAGE -->
           <section class="pkg-row">
             <div class="pkg-media">
-              <img src="Images/Pink-Gold-Round.jpg" alt="Gold package setup" />
+              <button
+                class="pkg-media-btn pkg-lightbox-trigger"
+                type="button"
+                aria-label="View Gold package image"
+                data-full="Images/Proposal2.JPG"
+              >
+                <img
+                  src="Images/Pink-Gold-Round.jpg"
+                  alt="Gold package setup"
+                  class="pkg-img"
+                  loading="lazy"
+                />
+              </button>
             </div>
+
             <div class="pkg-content">
               <h2 class="pkg-name">Gold Package</h2>
               <ul class="pkg-list">
@@ -109,8 +122,21 @@
           <!-- PLATINUM PACKAGE -->
           <section class="pkg-row">
             <div class="pkg-media">
-              <img src="Images/White-Platinum.JPG" alt="Platinum package setup" />
+              <button
+                class="pkg-media-btn pkg-lightbox-trigger"
+                type="button"
+                aria-label="View Platinum package image"
+                data-full="Images/Proposal3.JPG"
+              >
+                <img
+                  src="Images/White-Platinum.JPG"
+                  alt="Platinum package setup"
+                  class="pkg-img pkg-img--platinum"
+                  loading="lazy"
+                />
+              </button>
             </div>
+
             <div class="pkg-content">
               <h2 class="pkg-name">Platinum Package</h2>
               <ul class="pkg-list">
@@ -130,8 +156,21 @@
           <!-- DIAMOND PACKAGE -->
           <section class="pkg-row">
             <div class="pkg-media">
-              <img src="Images/Red-Diamond.JPG" alt="Diamond package setup" />
+              <button
+                class="pkg-media-btn pkg-lightbox-trigger"
+                type="button"
+                aria-label="View Diamond package image"
+                data-full="Images/Proposal.JPG"
+              >
+                <img
+                  src="Images/Red-Diamond.JPG"
+                  alt="Diamond package setup"
+                  class="pkg-img"
+                  loading="lazy"
+                />
+              </button>
             </div>
+
             <div class="pkg-content">
               <h2 class="pkg-name">Diamond Package</h2>
               <ul class="pkg-list">
@@ -192,6 +231,7 @@
               </div>
             </div>
           </section>
+
           <footer class="addons-section">
             <h3 class="addons-title">Add-Ons</h3>
             <div class="addons-inner">
@@ -205,9 +245,18 @@
               </ul>
             </div>
           </footer>
+
         </div>
       </section>
     </main>
+
+    <!-- PACKAGES LIGHTBOX -->
+    <div class="pkg-lightbox" id="pkg-lightbox" aria-hidden="true">
+      <button class="pkg-lightbox-close" id="pkg-lightbox-close" aria-label="Close">&times;</button>
+      <img class="pkg-lightbox-img" id="pkg-lightbox-img" alt="Expanded package image" />
+    </div>
+
+    <script src="Packages-lightbox.js"></script>
     <script src="NDP-sidebar.js"></script>
   </body>
 </html>
