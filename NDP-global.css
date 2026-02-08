@@ -8,13 +8,7 @@
   --radius: 18px;
   --max: 1100px;
 
-  /* ----- Floral Borders controls ----- */
-  --floral-size: 320px;
-  --floral-offset: -30px;
-  --floral-opacity: 0.50;
-  --floral-safe: 200px; 
-
-  --page-top-offset: 135px; /* ----- NEW CHANGE ----- */
+  --page-top-offset: 135px;
 }
 
 *{ box-sizing:border-box; }
@@ -27,7 +21,11 @@ html, body{
 body{
   margin: 0;
   color: var(--text);
-  background: var(--bg);
+  background: url("Images/Pink-Marble.jpeg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+  background-size: cover !important;
+  background-attachment: scroll !important;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: 1.55;
   overflow-x: hidden;
@@ -44,7 +42,7 @@ a:hover{ opacity:.92; }
 }
 
 h1,h2,h3{ margin:0 0 10px 0; letter-spacing:.2px; }
-p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
+p{ margin:0 0 12px 0; color: var(--text); }
 
 .card{
   border-radius:var(--radius);
@@ -62,7 +60,7 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
   border-radius:999px;
   border:1px solid var(--line);
   background:rgba(255,255,255,.06);
-  color:rgba(255,255,255,.92);
+  color: rgba(53,51,51,0.92);
   font-weight:600;
   cursor:pointer;
   transition:transform 160ms ease, background 160ms ease, border-color 160ms ease;
@@ -72,6 +70,7 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
 .btn-primary{
   background:linear-gradient(180deg, rgba(133, 162, 154, 0.95), rgba(119, 145, 137, 0.82));
   border-color:rgba(82, 116, 106, 0.7);
+  color: rgba(255,255,255,.95);
 }
 
 .btn-ghost{ background:rgba(0,0,0,.14); }
@@ -121,7 +120,7 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
 }
 
 .brand-logo{
-  height: 170px;
+  height: 100px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -138,14 +137,14 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
 
 .instagram-link{
   font-size: 1.25rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(53,51,51,0.92);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: color 0.25s ease, transform 0.25s ease;
 }
 .instagram-link:hover{
-  color: rgba(255,255,255,1);
+  color: rgba(53,51,51,0.92);
   transform: scale(1.08);
 }
 
@@ -157,7 +156,7 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
   padding:12px 14px;
   cursor:pointer;
   transition: transform 160ms ease, background 160ms ease;
-  color: rgba(255,255,255,.90);
+  color: rgba(53,51,51,0.92);
   font-size: 1.25rem;
   line-height: 1;
 }
@@ -259,30 +258,6 @@ p{ margin:0 0 12px 0; color:rgba(255,255,255,.82); }
   font-weight: 800;
 }
 
-/* ---------------- Floral Borders ----------------*/
-body::before{
-  content:"";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: var(--floral-opacity);
-
-  background-image:
-    url("Images/Florals/top_left_corner.png"),
-    url("Images/Florals/top_right_corner.png"),
-    url("Images/Florals/bottom_left_corner.png"),
-    url("Images/Florals/bottom_right_corner.png");
-
-  background-repeat: no-repeat;
-  background-size: var(--floral-size) var(--floral-size);
-  background-position:
-    var(--floral-offset) var(--floral-offset),
-    calc(100% - var(--floral-offset)) var(--floral-offset),
-    var(--floral-offset) calc(100% - var(--floral-offset)),
-    calc(100% - var(--floral-offset)) calc(100% - var(--floral-offset));
-}
-
 .nav,
 .page,
 .container,
@@ -292,23 +267,19 @@ body::before{
   z-index: 1;
 }
 
-.page{
-  padding-bottom: calc(var(--floral-safe) + env(safe-area-inset-bottom));
-}
-
+/* ---------------- Page spacing ---------------- */
 .page > :first-child{
   margin-top: var(--page-top-offset);
-} /* ----- NEW CHANGE ----- */
+}
 
 .page > :last-child{
-  margin-bottom: calc(var(--floral-safe) * 0.35);
+  margin-bottom: 24px;
 }
 
 /* ---------------- For Mobile Devices ---------------- */
 @media (max-width: 768px){
   :root{
-    --floral-size: 220px;
-    --floral-safe: 140px;
+    --page-top-offset: 28px;
   }
 
   .nav{
@@ -322,9 +293,5 @@ body::before{
   .brand-logo{
     height: 110px;
     max-width: 100%;
-  }
-
-  .page{
-    padding-bottom: calc(var(--floral-safe) + 16px + env(safe-area-inset-bottom));
   }
 }
