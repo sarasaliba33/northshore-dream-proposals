@@ -51,8 +51,8 @@
   overflow: hidden;
   background: rgba(0,0,0,0.12);
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-  aspect-ratio: 16 / 9;
-  position: relative;
+  height: 340px;
+  width: 100%;
 }
 
 .pkg-media-btn{
@@ -69,26 +69,38 @@
   outline: none;
 }
 
+.pkg-media-btn:focus{
+  outline: none;
+}
 .pkg-media-btn:focus-visible{
   box-shadow: 0 0 0 4px rgba(255,255,255,0.7);
 }
 
-.pkg-media img,
 .pkg-img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  user-select: none;
+  -webkit-user-drag: none;
   border-radius: 28px;
   transition: transform 220ms ease, filter 220ms ease;
 }
 
 .pkg-media-btn:hover .pkg-img{
   transform: scale(1.03);
-  filter: brightness(1.06);
+  filter: brightness(1.07);
+}
+.pkg-img--gold{
+  object-position: center 35%;
+  background: rgba(0,0,0,0.08);
+}
+.pkg-img--platinum{
+  object-position: center 11%;
 }
 
-.pkg-img--platinum{
+.pkg-img--diamond{
   object-position: center 35%;
 }
 
