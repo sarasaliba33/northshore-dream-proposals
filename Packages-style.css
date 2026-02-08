@@ -20,7 +20,7 @@
 }
 
 .script-title{
-  font-family: "Italianno", cursive;
+  font-family: "Cookie", cursive;
   font-weight: 400;
   font-size: clamp(3.2rem, 7vw, 5rem);
   color: rgba(53,51,51,0.92);
@@ -106,7 +106,7 @@
 
 .pkg-name{
   margin-bottom: 10px;
-  font-family: "Playfair Display", serif;
+  font-family: "Cookie", cursive;
   font-size: 2rem;
   color: rgba(53,51,51,0.92);
 }
@@ -144,7 +144,7 @@
 
 .notes-title{
   margin-bottom: 14px;
-  font-family: "Playfair Display", serif;
+  font-family: "Cookie", cursive;
   font-size: 1.6rem;
   color: rgba(53,51,51,0.92);
 }
@@ -184,7 +184,7 @@
 
 .addons-title{
   margin: 0 0 14px 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Cookie", cursive;
   font-size: 1.6rem;
   color: rgba(53,51,51,0.92);
 }
