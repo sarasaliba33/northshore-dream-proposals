@@ -9,6 +9,9 @@
   --max: 1100px;
 
   --page-top-offset: 135px;
+
+  --font-cookie: "Cookie", cursive;
+  --font-original: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 *{ box-sizing:border-box; }
@@ -26,10 +29,36 @@ body{
   background-position: center top !important;
   background-size: cover !important;
   background-attachment: scroll !important;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: var(--font-cookie);
+
   line-height: 1.55;
   overflow-x: hidden;
   position: relative;
+}
+
+button, input, textarea, select{
+  font-family: var(--font-cookie);
+}
+
+.fa-solid,
+.fa-regular{
+  font-family: "Font Awesome 6 Free" !important;
+  font-style: normal !important;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-solid{ font-weight: 900 !important; }
+.fa-regular{ font-weight: 400 !important; }
+
+.fa-brands{
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* -------- Links -------- */
@@ -89,6 +118,7 @@ p{ margin:0 0 12px 0; color: var(--text); }
   border-radius: 999px;
   position: relative;
   z-index: 10;
+  font-family: var(--font-original);
 }
 
 .brand{
@@ -105,6 +135,7 @@ p{ margin:0 0 12px 0; color: var(--text); }
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
+  font-family: var(--font-original);
 }
 
 .nav-center-logo{
@@ -133,6 +164,7 @@ p{ margin:0 0 12px 0; color: var(--text); }
   gap:14px;
   flex: 0 0 220px;
   min-width: 170px;
+  font-family: var(--font-original);
 }
 
 .instagram-link{
@@ -142,10 +174,17 @@ p{ margin:0 0 12px 0; color: var(--text); }
   align-items: center;
   justify-content: center;
   transition: color 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+  pointer-events: auto;
 }
 .instagram-link:hover{
   color: rgba(53,51,51,0.92);
   transform: scale(1.08);
+}
+
+.instagram-link i{
+  display: inline-block;
+  line-height: 1;
 }
 
 .menu-btn{
@@ -159,7 +198,9 @@ p{ margin:0 0 12px 0; color: var(--text); }
   color: rgba(53,51,51,0.92);
   font-size: 1.25rem;
   line-height: 1;
+  font-family: var(--font-original);
 }
+
 .menu-btn:hover{
   transform: translateY(-1px);
   background: rgba(255,255,255,.10);
@@ -191,6 +232,7 @@ p{ margin:0 0 12px 0; color: var(--text); }
   display: flex;
   flex-direction: column;
   gap: 14px;
+  font-family: var(--font-original);
 }
 .sidebar.open{ transform: translateX(0); }
 
@@ -206,6 +248,7 @@ p{ margin:0 0 12px 0; color: var(--text); }
 .sidebar-title{
   font-weight: 800;
   letter-spacing: .3px;
+  font-family: var(--font-original);
 }
 
 .sidebar-close{
@@ -221,7 +264,9 @@ p{ margin:0 0 12px 0; color: var(--text); }
   transition: background 160ms ease, transform 160ms ease;
   font-size: 28px;
   line-height: 1;
+  font-family: var(--font-original);
 }
+
 .sidebar-close:hover{
   background: rgba(255,255,255,0.10);
   transform: translateY(-1px);
@@ -246,25 +291,19 @@ p{ margin:0 0 12px 0; color: var(--text); }
   text-align: left;
   font-weight: 600;
   transition: background 160ms ease, transform 160ms ease, border-color 160ms ease;
+  font-family: var(--font-original);
 }
+
 .sidebar-links a:hover{
   background: rgba(255,255,255,0.10);
   transform: translateY(-1px);
   border-color: rgba(255,255,255,0.18);
 }
+
 .sidebar-links a[aria-current="page"]{
   background: rgba(255,255,255,0.12);
   border-color: rgba(255,255,255,0.22);
   font-weight: 800;
-}
-
-.nav,
-.page,
-.container,
-.flyer-block,
-.card{
-  position: relative;
-  z-index: 1;
 }
 
 /* ---------------- Page spacing ---------------- */
