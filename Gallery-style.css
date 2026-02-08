@@ -1,5 +1,5 @@
 .gallery-body{
-  background: #f7e6ea;
+  background: white;
 }
 
 .flyer{
@@ -51,12 +51,10 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.16);
   box-shadow: 0 18px 40px rgba(0,0,0,0.25);
   background: rgba(0,0,0,0.12);
-
   transition: transform 180ms ease, filter 180ms ease;
 }
 
